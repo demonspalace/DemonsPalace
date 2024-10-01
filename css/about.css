@@ -1,0 +1,292 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    color: white;
+}
+
+html {
+    background-color: #141414;
+    padding: 0rem 2rem;
+    overflow-y: scroll;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-grow: 1;
+}
+
+
+header, main, footer {
+    max-width: 82rem;
+}
+
+
+/* Font Sizing */
+h1 {
+    font-weight: 900;
+}
+
+/* Page Header */
+header {
+    display: flex;
+    width: 100%;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#desktop-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+#desktop-nav a {
+    text-decoration: none;
+}
+
+svg {
+    fill: white;
+}
+
+.logo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#mobile-menu-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: #292929;
+    width: 100vw;
+    height: 100vh
+}
+
+#mobile-menu-options ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    list-style: none;
+}
+
+#mobile-menu-options li {
+    text-align: center;
+}
+
+#mobile-menu-options a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#menu-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+svg {
+    display: flex;
+    justify-content: center;
+}
+
+/* Page Content */
+section {
+    display: flex;
+    gap: 2rem;
+}
+
+section article {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+figure img {
+    border-radius: 1rem;
+    width: 100%;
+}
+
+/* General Stylings */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    min-height: 100vh;
+    padding: 2rem 0rem;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+.cta-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #600000;
+    color: white;
+    border: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+    height: auto;
+    width: auto;
+    border-radius: .5rem;
+}
+
+.cta-button a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 2rem;
+}
+
+.cta-button:hover {
+    cursor: pointer; /* Ensures usability by turning the cursor to a pointer */
+    background-color: white;
+    color: #600000;
+}
+
+.cta-button:active {
+    background-color: white;
+    color:#600000;
+}
+
+.link, .cta {
+    color: #600000;
+}
+
+/* Footer Stylings */
+footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center; 
+   align-items: center;
+   gap: 1rem;
+}
+
+footer div {
+    display: flex;
+    gap: 2rem;
+}
+
+footer svg {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+@media only screen and (min-width: 1025px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    #desktop-nav {
+        display: block;
+    }
+
+    #mobile-nav {
+        display: none;
+    }
+
+    #mobile-menu-options {
+        display: none;
+    }
+
+    /* Page Content */
+    section figure, section article {
+        width: 50%;
+    }
+
+    figure img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: block;
+    }
+
+    #mobile-menu-options {
+        display: none;
+    }
+
+    /* Page Content */
+    section {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    section article {
+        width: 100%;
+    }
+
+    section figure {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    html {
+        padding: 0rem 1rem;
+    }
+
+    /* Font Sizing */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #desktop-nav {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: block;
+    }
+
+    #mobile-menu-options {
+        display: none;
+    }
+
+    /* Page Content */
+    section {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    section article {
+        width: 100%;
+    }
+
+    section figure {
+        width: 100%;
+    }
+}
